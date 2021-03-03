@@ -5,6 +5,18 @@ const displayData = (data) => {
   const visibilityTag = document.querySelector('#visibility-tag');
   const windspeedTag = document.querySelector('#windspeed-tag');
   const temperatureTag = document.querySelector('#temperature-tag');
+  const errorTag = document.querySelector('#error-tag');
+  errorTag.innerHTML = '';
+
+  if (data.cod === '400') {
+    errorTag.innerHTML = 'Please fill in a correct city name!';
+    return;
+  }
+
+  if (data.message) {
+    errorTag.innerHTML = data.message;
+    return;
+  }
 
   weatherTag.innerHTML = data.weather[0].description;
   temperatureTag.innerHTML = data.main.temp - 273.15;
@@ -16,7 +28,7 @@ const getWeatherData = async (cityName) => {
   try {
     const result = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
     const response = await result.json();
-    displayData(response);
+    return displayData(response);
   } catch (e) {
     return e;
   }
