@@ -1,7 +1,7 @@
 import displayData from './dom';
 import './index.css';
 
-const apiKey = 'c15a8021aaa6d4c7b6fb2a77982f0396';
+const apiKey = process.env.API_KEY;
 
 const getWeatherData = async (cityName) => {
   try {
