@@ -25,8 +25,8 @@ main {
   border: none;
   border-radius: 5px;
   padding: 0.5rem 0.4rem;
-  background-color: #FDC53C;
-  color: #4C1E3D;
+  background-color: #fdc53c;
+  color: #4c1e3d;
   font-size: 0.8rem;
   font-weight: bold;
   outline: none;
@@ -45,7 +45,9 @@ main {
   color: #ccc;
 }
 
-#temperature-tag, #city-tag, #unit {
+#temperature-tag,
+#city-tag,
+#unit {
   font-size: 6rem;
   font-weight: bold;
 }
