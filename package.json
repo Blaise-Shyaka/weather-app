@@ -1,0 +1,46 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "The Weather App enables users to submit their location in a form and get back the weather information.",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blaise-Shyaka/weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blaise-Shyaka/weather-app/issues"
+  },
+  "homepage": "https://github.com/Blaise-Shyaka/weather-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "babel-eslint": "10.1.x",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.1",
+    "dotenv-webpack": "^7.0.1",
+    "eslint": "6.8.x",
+    "eslint-config-airbnb-base": "14.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "process": "^0.11.10",
+    "style-loader": "^2.0.0",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}

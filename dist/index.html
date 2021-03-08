@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <div class="city-input">
+          <input
+            type="text"
+            name="city"
+            id="city-name-input"
+            placeholder="City Name"
+          />
+          <select name="unit" id="measuring-unit">
+            <option value="metric" selected>Choose Unit of measure</option>
+            <option value="metric">Celsius</option>
+            <option value="imperial">Fahrenheit</option>
+            <option value="standard">Kelvin</option>
+          </select>
+          <input type="submit" value="Get Weather Info" id="submit-city-name" />
+        </div>
+      </main>
+      <side class="weather-info">
+        <!-- Start -->
+        <div class="error">
+          <p id="error-tag"></p>
+        </div>
+        <div class="top-display">
+          <div class="temperature">
+            <p><span id="temperature-tag"></span><span id="unit"></span></p>
+          </div>
+          <div class="city">
+            <p id="city-tag"></p>
+          </div>
+          <div class="weather">
+            <img id="weather-icon" />
+            <p id="weather-tag"></p>
+          </div>
+        </div>
+        <div class="bottom-display">
+          <section class="weather-details">
+            <div class="visibility">
+              <p id="visibility-tag"></p>
+            </div>
+            <div class="wind-speed">
+              <p id="windspeed-tag"></p>
+            </div>
+          </section>
+        </div>
+        <!-- End -->
+      </side>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
