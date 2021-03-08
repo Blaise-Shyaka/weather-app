@@ -14,7 +14,8 @@ main {
   width: 50%;
 }
 
-.city-input input[type=text], .city-input select {
+.city-input input[type=text],
+.city-input select {
   border: none;
   border-radius: 5px;
   width: 35%;
