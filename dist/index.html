@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather-App</title>
   </head>
   <body>
     <div class="wrapper">
@@ -12,10 +12,16 @@
         <div class="city-input">
           <input
             type="text"
-            name="city-name"
+            name="city"
             id="city-name-input"
             placeholder="City Name"
           />
+          <select name="unit" id="measuring-unit">
+            <option value="metric" selected>Choose Unit of measure</option>
+            <option value="metric">Celsius</option>
+            <option value="imperial">Fahrenheit</option>
+            <option value="standard">Kelvin</option>
+          </select>
           <input type="submit" value="Get Weather Info" id="submit-city-name" />
         </div>
       </main>

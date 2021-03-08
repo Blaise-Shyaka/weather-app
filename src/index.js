@@ -3,9 +3,9 @@ import './index.css';
 
 const apiKey = process.env.API_KEY;
 
-const getWeatherData = async (cityName) => {
+const getWeatherData = async (cityName, units) => {
   try {
-    const result = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`);
+    const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`);
     const response = await result.json();
     return displayData(response);
   } catch (e) {
@@ -18,7 +18,8 @@ const sendRequest = () => {
 
   submitBtn.addEventListener('click', () => {
     const userInput = document.querySelector('#city-name-input').value;
-    getWeatherData(userInput);
+    const units = document.querySelector('#measuring-unit').value;
+    getWeatherData(userInput, units);
   });
 };
 

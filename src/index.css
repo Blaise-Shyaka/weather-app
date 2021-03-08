@@ -11,14 +11,15 @@ main {
 
 .city-input {
   margin-top: 2rem;
-  width: 40%;
+  width: 50%;
 }
 
-.city-input input[type=text] {
+.city-input input[type=text], .city-input select {
   border: none;
   border-radius: 5px;
-  width: 45%;
+  width: 35%;
   padding: 0.4rem 0.6rem;
+  outline: none;
 }
 
 .city-input input[type=submit] {
@@ -50,6 +51,12 @@ main {
 #unit {
   font-size: 6rem;
   font-weight: bold;
+}
+
+.error {
+  text-align: center;
+  color: #ccc;
+  margin-top: 2rem;
 }
 
 .weather {
